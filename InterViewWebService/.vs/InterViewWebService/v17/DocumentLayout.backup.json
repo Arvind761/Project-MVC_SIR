@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\@2025\\.net alok sir\\Sir\\InterViewWebService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A40CCDAB-A8FB-431D-8F7F-F3CD1CCD403D}|InterViewWebService\\InterViewWebService.csproj|D:\\@2025\\.net alok sir\\Sir\\InterViewWebService\\interviewwebservice\\webservice1.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40CCDAB-A8FB-431D-8F7F-F3CD1CCD403D}|InterViewWebService\\InterViewWebService.csproj|solutionrelative:interviewwebservice\\webservice1.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40CCDAB-A8FB-431D-8F7F-F3CD1CCD403D}|InterViewWebService\\InterViewWebService.csproj|d:\\@2025\\.net alok sir\\sir\\interviewwebservice\\interviewwebservice\\employee.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A40CCDAB-A8FB-431D-8F7F-F3CD1CCD403D}|InterViewWebService\\InterViewWebService.csproj|solutionrelative:interviewwebservice\\employee.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebService1.asmx.cs",
+              "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\InterViewWebService\\InterViewWebService\\WebService1.asmx.cs",
+              "RelativeDocumentMoniker": "InterViewWebService\\WebService1.asmx.cs",
+              "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\InterViewWebService\\InterViewWebService\\WebService1.asmx.cs*",
+              "RelativeToolTip": "InterViewWebService\\WebService1.asmx.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T20:08:03.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.html",
+              "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\InterViewWebService\\InterViewWebService\\Employee.html",
+              "RelativeDocumentMoniker": "InterViewWebService\\Employee.html",
+              "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\InterViewWebService\\InterViewWebService\\Employee.html",
+              "RelativeToolTip": "InterViewWebService\\Employee.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-13T20:06:51.453Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

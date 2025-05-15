@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">var Idd = 0;
+        $(document).ready(function () {
+            BindData();
+            BindCountry();
+        });
+
+
+        function BindCountry() {
+            $.ajax({
+                url: 'WebService1.asmx/ShowCountry',
+                type: 'post',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: "{}",
+                success: function (data) {
+                    data = JSON.parse(data.d);
+                    for (var i = 0; i < data.length; i++) {
+                        $("#ddlcountry").append($('<option></option>').html(data[i].countryname).val(data[i].countryid));
+                    }
+                },
+                error: function () {
+                    alert('Country Data Not found !!');
+                }
+            });
+        }
+
+        function BindState() {
+            $.ajax({
+                url: 'WebService1.asmx/ShowState',
+                type: 'post',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: "{ A: '" + $("#ddlcountry").val() + "' }",
+                async: false,
+                success: function (data) {
+                    data = JSON.parse(data.d);
+                    $("#ddlstate").empty();
+                    $("#ddlstate").append($('<option/>').attr("value", 0).text("--Select--"));
+                    for (var i = 0; i < data.length; i++) {
+                        $("#ddlstate").append($('<option></option>').html(data[i].statename).val(data[i].stateid));
+                    }
+                },
+                error: function () {
+                    alert('State Data Not found !!');
+                }
+            });
+        }
+
+
+        function BindCity() {
+            $.ajax({
+                url: 'WebService1.asmx/ShowCity',
+                type: 'post',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: "{ A: '" + $("#ddlstate").val() + "' }",
+                async: false,
+                success: function (data) {
+                    data = JSON.parse(data.d);
+                    $("#ddlcity").empty();
+                    $("#ddlcity").append($('<option></option>').html("--Select--").val(0));
+                    for (var i = 0; i < data.length; i++) {
+                        $("#ddlcity").append($('<option></option>').html(data[i].cityname).val(data[i].cityid));
+                    }
+                },
+                error: function () {
+                    alert('City Data Not found !!');
+                }
+            });
+        }
+
+        function BindData() {
+            $.ajax({
+                url: '/WebService1.asmx/ShowData',
+                type: 'post',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: {},
+                success: function (data) {
+                    data = JSON.parse(data.d);
+                    $("#tbl").find("tr:gt(0)").remove();
+                    for (var i = 0; i < data.length; i++) {
+                        $("#tbl").append('<tr style="height:40px"> <td>' + data[i].empid + '</td> <td>' + data[i].name + '</td> <td>' + data[i].mobile + '</td> <td>' + data[i].age + '</td> <td>' + data[i].countryname + '</td> <td>' + data[i].statename + '</td> <td>' + data[i].cityname + '</td>  <td style="color:red"><input type="button" id="btndelete" value="Delete" onclick="DeleteData(' + data[i].empid + ')" /></td>  <td style="color:red"><input type="button" id="btnedit" value="Edit" onclick="EditData(' + data[i].empid + ')" /></td> </tr>');
+                    }
+                },
+                error: function () {
+                    alert('dt Not found !!');
+                }
+            });
+        }
+
+
+
+        function SaveData() {
+            if ($("#btnsave").val() == "Save") {
+                $.ajax({
+                    url: 'WebService1.asmx/InsertData',
+                    type: 'post',
+                    contentType: 'application/json;charset=utf-8',
+                    dataType: 'json',
+                    data: "{ Name: '" + $("#txtname").val() + "', Mobile: '" + $("#txtmobile").val() + "', Age: '" + $("#txtage").val() + "',Country : '" + $("#ddlcountry").val() + "', State : '" + $("#ddlstate").val() + "', City : '" + $("#ddlcity").val() + "' }",
+                    success: function () {
+                        alert('Data Saved !!');
+                        BindData();
+                        Clear();
+                    },
+                    error: function () {
+                        alert('Data Not Saved !!');
+                    }
+                });
+            }
+            else if ($("#btnsave").val() == "Update") {
+                $.ajax({
+                    url: 'WebService1.asmx/UpdateData',
+                    type: 'post',
+                    contentType: 'application/json;charset=utf-8',
+                    dataType: 'json',
+                    data: "{ Id : '" + Idd + "', Name: '" + $("#txtname").val() + "', Mobile: '" + $("#txtmobile").val() + "', Age: '" + $("#txtage").val() + "',Country : '" + $("#ddlcountry").val() + "', State : '" + $("#ddlstate").val() + "', City : '" + $("#ddlcity").val() + "' }",
+                    success: function () {
+                        alert('Data Updated !!');
+                        BindData();
+                        Clear();
+                    },
+                    error: function () {
+                        alert('Data Not Updated !!');
+                    }
+                });
+            }
+        }
+
+
+
+        function DeleteData(empid) {
+            if (confirm('Are you sure you want to delete ??')) {
+                $.ajax({
+                    url: 'WebService1.asmx/DeleteData',
+                    type: 'post',
+                    contentType: 'application/json;charset=utf-8',
+                    dataType: 'json',
+                    data: "{ Id: '" + empid + "' }",
+                    success: function () {
+                        alert('Data Deleted !!');
+                        BindData();
+                    },
+                    error: function () {
+                        alert('Data Not Deleted !!');
+                    }
+                });
+            }
+        }
+
+
+        function Clear() {
+            $("#txtname").val("");
+            $("#txtmobile").val("");
+            $("#txtage").val("");
+            $("#ddlcountry").val("0");
+            $("#ddlstate").val("0");
+            $("#ddlcity").val("0");
+            $("#btnsave").val("Save");
+            Idd = 0;
+        }
+
+
+        function EditData(empid) {
+            $.ajax({
+                url: 'WebService1.asmx/EditData',
+                type: 'post',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: "{ Id: '" + empid + "' }",
+                async: false,
+                success: function (data) {
+                    data = JSON.parse(data.d);
+                    $("#txtname").val(data[0].name);
+                    $("#txtmobile").val(data[0].mobile);
+                    $("#txtage").val(data[0].age);
+                    $("#ddlcountry").val(data[0].country);
+                    BindState();
+                    $("#ddlstate").val(data[0].state);
+                    BindCity();
+                    $("#ddlcity").val(data[0].city);
+                    $("#btnsave").val("Update");
+                    Idd = empid;
+                },
+                error: function () {
+                    alert('Data Not Edited !!');
+                }
+            });
+        }
+        
+
+    </script>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Employee Name :</td>
+            <td><input type="text" id="txtname" /></td>
+        </tr>
+
+        <tr>
+            <td>Employee Mobile :</td>
+            <td><input type="text" id="txtmobile" /></td>
+        </tr>
+
+        <tr>
+            <td>Employee Age :</td>
+            <td><input type="text" id="txtage" /></td>
+        </tr>
+
+        <tr>
+            <td>Employee Country :</td>
+            <td>
+                <select id="ddlcountry" onchange="BindState()">
+                    <option value="0">--Select--</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Employee State :</td>
+            <td>
+                <select id="ddlstate" onchange="BindCity()">
+                    <option value="0">--Select--</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Employee City :</td>
+            <td>
+                <select id="ddlcity">
+                    <option value="0">--Select--</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="button" id="btnsave" value="Save" onclick="SaveData()" /></td>
+        </tr>
+    </table>
+
+    <table id="tbl" border="5" style="background-color:maroon;color:white;width:1000px">
+        <tr style="background-color:blue;height:40px">
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Employee Mobile</th>
+            <th>Employee Age</th>
+            <th>Employee Country</th>
+            <th>Employee State</th>
+            <th>Employee City</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </table>
+
+</body>
+</html>

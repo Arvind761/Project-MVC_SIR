@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{86866B90-ED24-441E-B5B9-FEB152FDD87B}|FullMVC_crud\\FullMVC_crud.csproj|d:\\@2025\\.net alok sir\\sir\\fullmvc_crud\\fullmvc_crud\\views\\employee\\employeeform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{86866B90-ED24-441E-B5B9-FEB152FDD87B}|FullMVC_crud\\FullMVC_crud.csproj|solutionrelative:fullmvc_crud\\views\\employee\\employeeform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86866B90-ED24-441E-B5B9-FEB152FDD87B}|FullMVC_crud\\FullMVC_crud.csproj|D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\fullmvc_crud\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86866B90-ED24-441E-B5B9-FEB152FDD87B}|FullMVC_crud\\FullMVC_crud.csproj|solutionrelative:fullmvc_crud\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86866B90-ED24-441E-B5B9-FEB152FDD87B}|FullMVC_crud\\FullMVC_crud.csproj|D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\fullmvc_crud\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86866B90-ED24-441E-B5B9-FEB152FDD87B}|FullMVC_crud\\FullMVC_crud.csproj|solutionrelative:fullmvc_crud\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeModel.cs",
+              "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\FullMVC_crud\\Models\\EmployeeModel.cs",
+              "RelativeDocumentMoniker": "FullMVC_crud\\Models\\EmployeeModel.cs",
+              "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\FullMVC_crud\\Models\\EmployeeModel.cs",
+              "RelativeToolTip": "FullMVC_crud\\Models\\EmployeeModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T18:35:13.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeForm.cshtml",
+              "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\FullMVC_crud\\Views\\Employee\\EmployeeForm.cshtml",
+              "RelativeDocumentMoniker": "FullMVC_crud\\Views\\Employee\\EmployeeForm.cshtml",
+              "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\FullMVC_crud\\Views\\Employee\\EmployeeForm.cshtml",
+              "RelativeToolTip": "FullMVC_crud\\Views\\Employee\\EmployeeForm.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAJkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-12T18:30:58.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\FullMVC_crud\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "FullMVC_crud\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\FullMVC_crud\\FullMVC_crud\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "FullMVC_crud\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAuwIEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T18:29:03.769Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
