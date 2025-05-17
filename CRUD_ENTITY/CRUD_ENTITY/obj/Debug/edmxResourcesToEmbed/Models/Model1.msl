@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db2425_16525ModelStoreContainer" CdmEntityContainer="db2425_16525Entities">
+    <EntitySetMapping Name="tblEmployees">
+      <EntityTypeMapping TypeName="db2425_16525Model.tblEmployee">
+        <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="age" ColumnName="age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="employee_delete" FunctionName="db2425_16525Model.Store.employee_delete" />
+    <FunctionImportMapping FunctionImportName="employee_edit" FunctionName="db2425_16525Model.Store.employee_edit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db2425_16525Model.employee_edit_Result">
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="age" ColumnName="age" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="employee_get" FunctionName="db2425_16525Model.Store.employee_get">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db2425_16525Model.employee_get_Result">
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="age" ColumnName="age" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="employee_insert" FunctionName="db2425_16525Model.Store.employee_insert" />
+    <FunctionImportMapping FunctionImportName="employee_update" FunctionName="db2425_16525Model.Store.employee_update" />
+  </EntityContainerMapping>
+</Mapping>

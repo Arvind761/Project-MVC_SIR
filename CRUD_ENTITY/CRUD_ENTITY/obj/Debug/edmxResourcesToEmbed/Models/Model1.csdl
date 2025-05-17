@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db2425_16525Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="empid" />
+    </Key>
+    <Property Name="empid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mobile" Type="Int64" />
+    <Property Name="age" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="db2425_16525Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblEmployees" EntityType="Self.tblEmployee" />
+    <FunctionImport Name="employee_delete">
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="employee_edit" ReturnType="Collection(db2425_16525Model.employee_edit_Result)">
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="employee_get" ReturnType="Collection(db2425_16525Model.employee_get_Result)" />
+    <FunctionImport Name="employee_insert">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="mobile" Mode="In" Type="Int64" />
+      <Parameter Name="age" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="employee_update">
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="mobile" Mode="In" Type="Int64" />
+      <Parameter Name="age" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="employee_edit_Result">
+    <Property Type="Int32" Name="empid" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="mobile" Nullable="true" />
+    <Property Type="Int32" Name="age" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="employee_get_Result">
+    <Property Type="Int32" Name="empid" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="mobile" Nullable="true" />
+    <Property Type="Int32" Name="age" Nullable="true" />
+  </ComplexType>
+</Schema>
