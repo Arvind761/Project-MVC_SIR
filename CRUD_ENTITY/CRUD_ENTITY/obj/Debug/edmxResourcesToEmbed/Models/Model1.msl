@@ -4,6 +4,9 @@
     <EntitySetMapping Name="tblEmployees">
       <EntityTypeMapping TypeName="db2425_16525Model.tblEmployee">
         <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
           <ScalarProperty Name="empid" ColumnName="empid" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="mobile" ColumnName="mobile" />
@@ -34,5 +37,31 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="employee_insert" FunctionName="db2425_16525Model.Store.employee_insert" />
     <FunctionImportMapping FunctionImportName="employee_update" FunctionName="db2425_16525Model.Store.employee_update" />
+    <EntitySetMapping Name="tblCities">
+      <EntityTypeMapping TypeName="db2425_16525Model.tblCity">
+        <MappingFragment StoreEntitySet="tblCity">
+          <ScalarProperty Name="cityname" ColumnName="cityname" />
+          <ScalarProperty Name="stateid" ColumnName="stateid" />
+          <ScalarProperty Name="cityid" ColumnName="cityid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblcountries">
+      <EntityTypeMapping TypeName="db2425_16525Model.tblcountry">
+        <MappingFragment StoreEntitySet="tblcountry">
+          <ScalarProperty Name="countryname" ColumnName="countryname" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStates">
+      <EntityTypeMapping TypeName="db2425_16525Model.tblState">
+        <MappingFragment StoreEntitySet="tblState">
+          <ScalarProperty Name="statename" ColumnName="statename" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="stateid" ColumnName="stateid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

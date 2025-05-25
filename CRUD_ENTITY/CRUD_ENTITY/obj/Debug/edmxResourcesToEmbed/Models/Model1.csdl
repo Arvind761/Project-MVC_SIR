@@ -8,6 +8,9 @@
     <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="mobile" Type="Int64" />
     <Property Name="age" Type="Int32" />
+    <Property Name="country" Type="Int32" />
+    <Property Name="state" Type="Int32" />
+    <Property Name="city" Type="Int32" />
   </EntityType>
   <EntityContainer Name="db2425_16525Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tblEmployees" EntityType="Self.tblEmployee" />
@@ -29,6 +32,9 @@
       <Parameter Name="mobile" Mode="In" Type="Int64" />
       <Parameter Name="age" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="tblCities" EntityType="db2425_16525Model.tblCity" />
+    <EntitySet Name="tblcountries" EntityType="db2425_16525Model.tblcountry" />
+    <EntitySet Name="tblStates" EntityType="db2425_16525Model.tblState" />
   </EntityContainer>
   <ComplexType Name="employee_edit_Result">
     <Property Type="Int32" Name="empid" Nullable="false" />
@@ -42,4 +48,27 @@
     <Property Type="Int64" Name="mobile" Nullable="true" />
     <Property Type="Int32" Name="age" Nullable="true" />
   </ComplexType>
+  <EntityType Name="tblCity">
+    <Key>
+      <PropertyRef Name="cityid" />
+    </Key>
+    <Property Name="cityid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stateid" Type="Int32" />
+    <Property Name="cityname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblcountry">
+    <Key>
+      <PropertyRef Name="countryid" />
+    </Key>
+    <Property Name="countryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="countryname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblState">
+    <Key>
+      <PropertyRef Name="stateid" />
+    </Key>
+    <Property Name="stateid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="countryid" Type="Int32" />
+    <Property Name="statename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

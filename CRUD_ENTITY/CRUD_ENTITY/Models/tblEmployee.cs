@@ -18,5 +18,8 @@ namespace CRUD_ENTITY.Models
         public string name { get; set; }
         public Nullable<long> mobile { get; set; }
         public Nullable<int> age { get; set; }
+        public Nullable<int> country { get; set; }
+        public Nullable<int> state { get; set; }
+        public Nullable<int> city { get; set; }
     }
 }

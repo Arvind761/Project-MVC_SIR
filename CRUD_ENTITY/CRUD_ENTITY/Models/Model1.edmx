@@ -4,7 +4,22 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db2425_16525Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="db2425_16525Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblCity">
+          <Key>
+            <PropertyRef Name="cityid" />
+          </Key>
+          <Property Name="cityid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="stateid" Type="int" />
+          <Property Name="cityname" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblcountry">
+          <Key>
+            <PropertyRef Name="countryid" />
+          </Key>
+          <Property Name="countryid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="countryname" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="tblEmployee">
           <Key>
             <PropertyRef Name="empid" />
@@ -13,6 +28,17 @@
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="mobile" Type="bigint" />
           <Property Name="age" Type="int" />
+          <Property Name="country" Type="int" />
+          <Property Name="state" Type="int" />
+          <Property Name="city" Type="int" />
+        </EntityType>
+        <EntityType Name="tblState">
+          <Key>
+            <PropertyRef Name="stateid" />
+          </Key>
+          <Property Name="stateid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="countryid" Type="int" />
+          <Property Name="statename" Type="varchar" MaxLength="50" />
         </EntityType>
         <Function Name="employee_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="empid" Type="int" Mode="In" />
@@ -33,10 +59,12 @@
           <Parameter Name="age" Type="int" Mode="In" />
         </Function>
         <EntityContainer Name="db2425_16525ModelStoreContainer">
+          <EntitySet Name="tblCity" EntityType="Self.tblCity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblcountry" EntityType="Self.tblcountry" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblState" EntityType="Self.tblState" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db2425_16525Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -48,14 +76,17 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="mobile" Type="Int64" />
           <Property Name="age" Type="Int32" />
+          <Property Name="country" Type="Int32" />
+          <Property Name="state" Type="Int32" />
+          <Property Name="city" Type="Int32" />
         </EntityType>
         <EntityContainer Name="db2425_16525Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblEmployees" EntityType="Self.tblEmployee" />
           <FunctionImport Name="employee_delete">
-            <Parameter Name="empid" Mode="In" Type="Int32" />
+          <Parameter Name="empid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="employee_edit" ReturnType="Collection(db2425_16525Model.employee_edit_Result)">
-            <Parameter Name="empid" Mode="In" Type="Int32" />
+          <Parameter Name="empid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="employee_get" ReturnType="Collection(db2425_16525Model.employee_get_Result)" />
           <FunctionImport Name="employee_insert">
@@ -69,6 +100,9 @@
             <Parameter Name="mobile" Mode="In" Type="Int64" />
             <Parameter Name="age" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="tblCities" EntityType="db2425_16525Model.tblCity" />
+          <EntitySet Name="tblcountries" EntityType="db2425_16525Model.tblcountry" />
+          <EntitySet Name="tblStates" EntityType="db2425_16525Model.tblState" />
         </EntityContainer>
         <ComplexType Name="employee_edit_Result">
           <Property Type="Int32" Name="empid" Nullable="false" />
@@ -82,6 +116,29 @@
           <Property Type="Int64" Name="mobile" Nullable="true" />
           <Property Type="Int32" Name="age" Nullable="true" />
         </ComplexType>
+        <EntityType Name="tblCity">
+          <Key>
+            <PropertyRef Name="cityid" />
+          </Key>
+          <Property Name="cityid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="stateid" Type="Int32" />
+          <Property Name="cityname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblcountry">
+          <Key>
+            <PropertyRef Name="countryid" />
+          </Key>
+          <Property Name="countryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="countryname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblState">
+          <Key>
+            <PropertyRef Name="stateid" />
+          </Key>
+          <Property Name="stateid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="countryid" Type="Int32" />
+          <Property Name="statename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -91,6 +148,9 @@
           <EntitySetMapping Name="tblEmployees">
             <EntityTypeMapping TypeName="db2425_16525Model.tblEmployee">
               <MappingFragment StoreEntitySet="tblEmployee">
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="country" ColumnName="country" />
                 <ScalarProperty Name="empid" ColumnName="empid" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="mobile" ColumnName="mobile" />
@@ -121,6 +181,32 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="employee_insert" FunctionName="db2425_16525Model.Store.employee_insert" />
           <FunctionImportMapping FunctionImportName="employee_update" FunctionName="db2425_16525Model.Store.employee_update" />
+          <EntitySetMapping Name="tblCities">
+            <EntityTypeMapping TypeName="db2425_16525Model.tblCity">
+              <MappingFragment StoreEntitySet="tblCity">
+                <ScalarProperty Name="cityname" ColumnName="cityname" />
+                <ScalarProperty Name="stateid" ColumnName="stateid" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblcountries">
+            <EntityTypeMapping TypeName="db2425_16525Model.tblcountry">
+              <MappingFragment StoreEntitySet="tblcountry">
+                <ScalarProperty Name="countryname" ColumnName="countryname" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStates">
+            <EntityTypeMapping TypeName="db2425_16525Model.tblState">
+              <MappingFragment StoreEntitySet="tblState">
+                <ScalarProperty Name="statename" ColumnName="statename" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+                <ScalarProperty Name="stateid" ColumnName="stateid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

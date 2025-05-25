@@ -6,6 +6,9 @@
     <edmx:Diagrams>
       <Diagram DiagramId="6069115ff8cc48fba5087ad043427f6c" Name="Diagram1">
         <EntityTypeShape EntityType="db2425_16525Model.tblEmployee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db2425_16525Model.tblCity" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="db2425_16525Model.tblcountry" Width="1.5" PointX="3.75" PointY="3.75" />
+        <EntityTypeShape EntityType="db2425_16525Model.tblState" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

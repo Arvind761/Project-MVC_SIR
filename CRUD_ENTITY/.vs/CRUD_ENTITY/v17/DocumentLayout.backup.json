@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\crud_entity\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|solutionrelative:crud_entity\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|d:\\@2025\\.net alok sir\\sir\\crud_entity\\crud_entity\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|solutionrelative:crud_entity\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|d:\\@2025\\.net alok sir\\sir\\crud_entity\\crud_entity\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\crud_entity\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|solutionrelative:crud_entity\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|d:\\@2025\\.net alok sir\\sir\\crud_entity\\crud_entity\\views\\employee\\employeeform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\crud_entity\\views\\employee\\employeeform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|solutionrelative:crud_entity\\views\\employee\\employeeform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|d:\\@2025\\.net alok sir\\sir\\crud_entity\\crud_entity\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{AE81C086-0693-4DD5-A597-BBAF7E70FFA5}|CRUD_ENTITY\\CRUD_ENTITY.csproj|solutionrelative:crud_entity\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,51 +34,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RouteConfig.cs",
               "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\App_Start\\RouteConfig.cs",
               "RelativeDocumentMoniker": "CRUD_ENTITY\\App_Start\\RouteConfig.cs",
               "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\App_Start\\RouteConfig.cs",
               "RelativeToolTip": "CRUD_ENTITY\\App_Start\\RouteConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T14:51:58.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T14:51:58.15Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EmployeeForm.cshtml",
               "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\Views\\Employee\\EmployeeForm.cshtml",
               "RelativeDocumentMoniker": "CRUD_ENTITY\\Views\\Employee\\EmployeeForm.cshtml",
               "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\Views\\Employee\\EmployeeForm.cshtml",
               "RelativeToolTip": "CRUD_ENTITY\\Views\\Employee\\EmployeeForm.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAACwAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T14:43:37.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T14:43:37.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "CRUD_ENTITY\\Controllers\\EmployeeController.cs",
               "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "CRUD_ENTITY\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-17T14:42:55.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Model1.edmx [Diagram1]",
               "DocumentMoniker": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\Models\\Model1.edmx",
               "RelativeDocumentMoniker": "CRUD_ENTITY\\Models\\Model1.edmx",
-              "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\Models\\Model1.edmx [Diagram1]",
-              "RelativeToolTip": "CRUD_ENTITY\\Models\\Model1.edmx [Diagram1]",
+              "ToolTip": "D:\\@2025\\.net alok sir\\Sir\\CRUD_ENTITY\\CRUD_ENTITY\\Models\\Model1.edmx [Diagram1]*",
+              "RelativeToolTip": "CRUD_ENTITY\\Models\\Model1.edmx [Diagram1]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
               "WhenOpened": "2025-05-17T14:40:50.469Z",
               "EditorCaption": " [Diagram1]"

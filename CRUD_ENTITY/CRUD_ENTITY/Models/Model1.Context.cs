@@ -28,6 +28,9 @@ namespace CRUD_ENTITY.Models
         }
     
         public virtual DbSet<tblEmployee> tblEmployees { get; set; }
+        public virtual DbSet<tblCity> tblCities { get; set; }
+        public virtual DbSet<tblcountry> tblcountries { get; set; }
+        public virtual DbSet<tblState> tblStates { get; set; }
     
         public virtual int employee_delete(Nullable<int> empid)
         {
